@@ -1,3 +1,4 @@
 beautifulsoup4==4.10.0
 pytz==2021.3
 requests==2.22.0
+pause==0.3
