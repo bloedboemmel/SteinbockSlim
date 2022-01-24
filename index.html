@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <link rel= "icon" href="./icon.png">
+
+    <title>Steinbock</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+    <link rel="stylesheet" type="text/css" href="css/fullpage.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+    <!--- Import Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js">  </script>
+
+    </head>
+    
+    <body>
+    
+        <div class="preloader">
+            <div class="preloader-bounce">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <header id="header">
+            <div class="container-fluid">
+                <div class="navbar">
+                    <a href="#" id="logo" title="Jakob Jung">
+                    </a>
+                    <div class="navigation-row">
+                        <nav id="navigation">
+                            <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button>
+                            <div class="nav-box navbar-collapse">
+                                <ul class="navigation-menu nav navbar-nav navbars" id="nav">
+                                    <li data-menuanchor="slide01" class="active"><a href="#slide01">Nürnberg</a></li>
+                                    <li data-menuanchor="slide02"><a href="#slide02">Erlangen</a></li>
+                                    <li data-menuanchor="slide03"><a href="#slide03">Zirndorf</a></li>
+                                    <li data-menuanchor="slide04"><a href="#slide04">Passau</a></li>
+                                    <li data-menuanchor="slide05"><a href="#slide05">Konstanz</a></li>
+                                    <li data-menuanchor="slide06"><a href="#slide06">About</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div id="fullpage" class="fullpage-default">
+
+            <div class="section animated-row" data-section="slide01">
+              
+              <div class="welcome-box">
+                <div class="section-inner">
+                  
+                    <div id="wrapper">
+                      <canvas id="chartNürnberg"></canvas>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide02">
+                <div class="section-inner">
+                    <div id="wrapper">
+                      <canvas id="chartErlangen"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="section animated-row" data-section="slide03">
+                <div class="section-inner">
+                    <div id="wrapper">
+                      <canvas id="chartZirndorf"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="section animated-row" data-section="slide04">
+                <div class="section-inner">
+                    <div id="wrapper">
+                      <canvas id="chartPassau"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="section animated-row" data-section="slide05">
+                <div class="section-inner">
+                    <div id="wrapper">
+                      <canvas id="chartKonstanz"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="section animated-row" data-section="slide06">
+                <div class="section-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="about-us">
+                                    <div class="about-us-inner">
+                                        <div class="about-us-content">
+                                            <h2>About the graphs</h2>
+                                            <p>
+                                                These are the real-time occupancy graphs of the different locations of the Boulder-Gym Steinbock.
+                                                The graphs are updated every 15 minutes.
+                                                If you have any issues or like to contribute, please check out the <a href="github.com/bloedboemmel/SteibockSlim">GitHub repository</a>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="social-icons">
+            <div class="text-right">
+                <ul class="social-icons">
+                    <li><a href="https://github.com/bloedboemmel" title="Github"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://ko-fi.com/bloedboemmel" title="Twitter"><i class="fa fa-coffee"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    
+        
+    
+
+    <script src="js/jquery.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/fullpage.min.js"></script>
+
+    <script src="js/scrolloverflow.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/jquery.inview.min.js"></script>
+
+    <script src="js/form.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/chartBock.js"></script>
+
+  </body>
+</html>
