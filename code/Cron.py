@@ -5,8 +5,7 @@ import RemoveData
 from time import sleep
 from datetime import datetime, timedelta
 import pause
-dt = datetime(2013, 6, 2, 14, 36, 34, 383752)
-pause.until(dt)
+
 def loop():
     
     
@@ -14,12 +13,11 @@ def loop():
         #If time between 8 and 23
         if 8 <= datetime.now().hour <= 23:
             PlotData.main()
-            now = datetime.now()
-            minute = (int(now.minute/15) +1) * 15
-            pause.until(now + timedelta(minutes=minute))
+            minutesToSleep = 15 - datetime.now().minute % 15
+            sleep(minutesToSleep * 60)
         elif datetime.now().hour == 0:
                 RemoveData.main()
-                pause.until(datetime.now() + timedelta(hours=8))
+                pause.until(datetime.now() + timedelta(hours=7, minutes=45))
         # else sleep till 8
         else:
             sleep(60*15)
