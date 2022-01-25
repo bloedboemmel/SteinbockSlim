@@ -1,6 +1,5 @@
 # Run PlotData.main() every 15 minutes between 8 and 23.
 # Run RemoveData.main() every day at 02:00.
-from msilib.schema import Error
 import PlotData
 import RemoveData
 from time import sleep
@@ -27,9 +26,7 @@ def loop():
             break
         except Exception as e:
             print(e)
-        except Error as e:
-            print(e)
-            
+
             
 
 if __name__ == '__main__':
