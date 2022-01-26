@@ -3,13 +3,24 @@ import json
 import pytz
 from datetime import datetime, date
 from city import city, getcsv
-
-
+import requests
+from bs4 import BeautifulSoup
 tz = pytz.timezone('Europe/Berlin')
 now = datetime.now(tz)
 weekday = now.weekday()
 
+def getnow(Stadt):
+    ans = requests.get(Stadt.BoulderadoUrl)
+    soup = BeautifulSoup(ans.content, 'html.parser')
+    aktuellbesetzt = soup.find_all(class_="actcounter-content")
+    besetzt = int(aktuellbesetzt[0].text)
+    aktuellfrei = soup.find_all(class_="freecounter-content")
+    frei = int(aktuellfrei[0].text)
+    Stadt.max = frei+besetzt
+    Stadt.prozent = int(100 * besetzt / (besetzt + frei))
+
 def addNewAverage(Stadt):
+    getnow(Stadt)
     my_date = date.today()
     dayname = calendar.day_name[my_date.weekday()]
     avg_dict = {}
@@ -40,8 +51,8 @@ def addNewAverage(Stadt):
                     break
             if save0 is not None and save1 is not None:
                 interpol_avg = int((avg_dict[save1]['AVG'][0] - avg_dict[save0]['AVG'][0]) / (keys.index(save1) - keys.index(save0)))
-                interpol_frei = int(Stadt.max * (interpol_avg / 100))
-                interpol_belegt = Stadt.max - interpol_frei
+                interpol_belegt = int(Stadt.max * (interpol_avg / 100))
+                interpol_frei = Stadt.max - interpol_belegt
                 avg_dict[key] = {'AVG': [interpol_avg, interpol_frei, interpol_belegt]}
             else:
                 avg_dict[key] = {'AVG': [0, 0, 0]}
@@ -51,6 +62,7 @@ def addNewAverage(Stadt):
             avg_dict[key]['TODAY'] = [None, None, None]
     with open(f'today/{Stadt.ShortForm}Belegung.json', 'w') as outfile:
         json.dump(avg_dict, outfile)
+        print(f'today/{Stadt.ShortForm}Belegung.json written')
 
 def main():
 
