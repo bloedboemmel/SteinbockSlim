@@ -1,7 +1,22 @@
 # SteinbockSlim
-Das das ganze Github-Actions-Zeug etwas ausgeartet ist (I'm looking at you [@github-actions[bot]](https://github.com/features/actions) mit 14k commits), einfach jetzt wunderbar gehosted auf ner eigenen Webseite und alle 15 geupdated, nicht wie Github Cron mit PI*Daumen alle 47,89 Minuten :(
 
-## [There you go](https://steinbock.jakob-jung.com/)
-Und natürlich SSL_Verschlüsselt
+**⚠️ PROJECT DEPRECATED ⚠️**
 
-![](https://pics.me.me/self-signed-ssl-certificates%E2%80%A6-72178525.png)
+This project is no longer functional due to the closure of the Boulderado-Counter service that it relied upon.
+
+## What happened?
+
+SteinbockSlim was designed to track real-time occupancy data from Boulder-Gym Steinbock locations by querying the Boulderado-Counter API. Unfortunately, the Boulderado-Counter service has been permanently closed, making this project unable to function as intended.
+
+## Thank you
+
+We want to express our heartfelt gratitude to:
+- Everyone who used SteinbockSlim over the years
+- All contributors who helped improve the project
+- The Boulder-Gym Steinbock community
+
+This is a sad moment for the project, but we truly appreciate all the support from the community throughout its lifetime.
+
+## Repository Status
+
+This repository will remain available as a historical archive. The code and data serve as a record of the project's functionality and may be useful for educational purposes or as a reference for similar projects.
